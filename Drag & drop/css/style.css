@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-image: url("../images/paper_text.png"); }
+
+.dragArea, .dropArea {
+  padding: 40px;
+  border: 1px solid #bebebe;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  position: relative; }
+  .dragArea .title, .dropArea .title {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    color: #8a8080;
+    font-weight: bold; }
+
+.dragArea .number {
+  width: 15%;
+  height: 100px;
+  border: 1px solid #8a8080;
+  text-align: center;
+  line-height: 100px;
+  color: #8a8080;
+  font-size: 3em;
+  margin-bottom: 20px;
+  cursor: move;
+  user-select: none; }
+
+.dropArea .number-box {
+  min-height: 200px;
+  width: 30%;
+  border: 1px solid #8a8080;
+  position: relative;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease-in-out; }
+  .dropArea .number-box.active {
+    background-color: rgba(52, 98, 52, 0.9); }
+    .dropArea .number-box.active span {
+      color: white; }
+.dropArea .number {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #8a8080;
+  text-align: center;
+  font-size: 1.3em;
+  color: #8a8080; }
+
+/*# sourceMappingURL=style.css.map */

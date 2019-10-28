@@ -1,0 +1,75 @@
+@import "variables";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/paper_text.png");
+}
+
+.dragArea, .dropArea{
+    padding: 40px;
+    border: 1px solid #bebebe;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    position: relative;
+
+    .title{
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        color: rgb(138, 128, 128);
+        font-weight: bold;
+    }
+}
+
+.dragArea{
+    .number{
+        width: 15%;
+        height: 100px;
+        border: 1px solid rgb(138, 128, 128);
+        text-align: center;
+        line-height: 100px;
+        color: rgb(138, 128, 128);
+        font-size: 3em;
+        margin-bottom: 20px;
+        cursor: move;
+        user-select: none;
+    }
+}
+
+.dropArea{
+
+    .number-box{
+        min-height: 200px;
+        width: 30%;
+        border: 1px solid rgb(138, 128, 128);
+        position: relative;
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        transition: all 0.2s ease-in-out;
+
+        &.active{
+            background-color: rgba(52, 98, 52, 0.9);
+
+            span{
+                color: white;
+            }
+        }
+    }
+
+    .number{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid rgb(138, 128, 128);
+        text-align: center;
+        font-size: 1.3em;
+        color: rgb(138, 128, 128);
+    }
+}
